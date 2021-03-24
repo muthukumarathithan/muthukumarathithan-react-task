@@ -9,8 +9,19 @@ import TestJSX from "./TestJSX";
 import Map from "./Map";
 import State from "./State";
 import Twowaybinding from "./Twowaybinding";
+import store from "./store";
+import { COUNTER_INCREMENT, COUNTER_DECREMENT } from "./ActionType";
 
 class App extends Component {
+  increment = () => {
+    store.dispatch({ type: COUNTER_INCREMENT });
+    console.log(store.getState().count);
+  };
+  decrement = () => {
+    store.dispatch({ type: COUNTER_DECREMENT });
+    console.log(store.getState().count);
+  };
+
   render() {
     let myStyle = {
       fontSize: 30,
@@ -18,6 +29,7 @@ class App extends Component {
       fontStyle: "Courier"
     };
     let i = 5;
+
     return (
       <Router>
         <div>
@@ -88,6 +100,12 @@ class App extends Component {
               <Twowaybinding />
             </Route>
           </Switch>
+          <button type="button" onClick={this.increment}>
+            increment
+          </button>
+          <button type="button" onClick={this.decrement}>
+            decrement
+          </button>
         </div>
       </Router>
     );
