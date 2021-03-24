@@ -7,6 +7,7 @@ import Form from "./Form";
 import Home from "./Home";
 import TestJSX from "./TestJSX";
 import Map from "./Map";
+import State from "./State";
 
 class App extends Component {
   render() {
@@ -45,6 +46,9 @@ class App extends Component {
             <li>
               <Link to="/map">Map</Link>
             </li>
+            <li>
+              <Link to="/state">State</Link>
+            </li>
           </ul>
 
           <hr />
@@ -72,6 +76,9 @@ class App extends Component {
             </Route>
             <Route path="/map">
               <Map />
+            </Route>
+            <Route path="/state">
+              <State />
             </Route>
           </Switch>
         </div>
