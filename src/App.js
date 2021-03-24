@@ -8,6 +8,7 @@ import Home from "./Home";
 import TestJSX from "./TestJSX";
 import Map from "./Map";
 import State from "./State";
+import Twowaybinding from "./Twowaybinding";
 
 class App extends Component {
   render() {
@@ -49,6 +50,9 @@ class App extends Component {
             <li>
               <Link to="/state">State</Link>
             </li>
+            <li>
+              <Link to="/twoway">TwoWayBinding</Link>
+            </li>
           </ul>
 
           <hr />
@@ -79,6 +83,9 @@ class App extends Component {
             </Route>
             <Route path="/state">
               <State />
+            </Route>
+            <Route path="/twoway">
+              <Twowaybinding />
             </Route>
           </Switch>
         </div>
