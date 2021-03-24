@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import Function from "./Function.js";
 import List from "./List";
+import Form from "./Form";
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
         <First />
         <Second />
         <List />
+        <Form />
       </div>
     );
   }
