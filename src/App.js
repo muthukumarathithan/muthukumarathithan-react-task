@@ -9,6 +9,7 @@ import TestJSX from "./TestJSX";
 import Map from "./Map";
 import State from "./State";
 import Twowaybinding from "./Twowaybinding";
+import Pure from "./Pure";
 import store from "./store";
 import { COUNTER_INCREMENT, COUNTER_DECREMENT } from "./ActionType";
 
@@ -65,6 +66,9 @@ class App extends Component {
             <li>
               <Link to="/twoway">TwoWayBinding</Link>
             </li>
+            <li>
+              <Link to="/pure">Pure</Link>
+            </li>
           </ul>
 
           <hr />
@@ -98,6 +102,9 @@ class App extends Component {
             </Route>
             <Route path="/twoway">
               <Twowaybinding />
+            </Route>
+            <Route path="/pure">
+              <Pure />
             </Route>
           </Switch>
           <button type="button" onClick={this.increment}>
