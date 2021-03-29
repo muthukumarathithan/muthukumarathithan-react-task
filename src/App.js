@@ -111,7 +111,7 @@ class App extends Component {
               <Pure />
             </Route>
             <Route path="/inputfile">
-              <inputfile />
+              <Inputfile />
             </Route>
           </Switch>
           <button type="button" onClick={this.increment}>

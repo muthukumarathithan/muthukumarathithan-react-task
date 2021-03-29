@@ -8,7 +8,7 @@ class Inputfile extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-   
+    alert(`Selected file - ${this.fileInput.current.files[0].name}`);
   }
 
   render() {
