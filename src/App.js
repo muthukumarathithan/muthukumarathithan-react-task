@@ -9,6 +9,7 @@ import TestJSX from "./TestJSX";
 import Map from "./Map";
 import State from "./State";
 import Twowaybinding from "./Twowaybinding";
+import Inputfile from "./Inputfile";
 import Pure from "./Pure";
 import store from "./store";
 import { COUNTER_INCREMENT, COUNTER_DECREMENT } from "./ActionType";
@@ -69,6 +70,9 @@ class App extends Component {
             <li>
               <Link to="/pure">Pure</Link>
             </li>
+            <li>
+              <Link to="/inputfile">Inputfile</Link>
+            </li>
           </ul>
 
           <hr />
@@ -105,6 +109,9 @@ class App extends Component {
             </Route>
             <Route path="/pure">
               <Pure />
+            </Route>
+            <Route path="/inputfile">
+              <inputfile />
             </Route>
           </Switch>
           <button type="button" onClick={this.increment}>
